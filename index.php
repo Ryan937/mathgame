@@ -16,10 +16,7 @@
         && isset($second_number)
         && isset($answer)
     )
-    $nmbr1 = rand(0,20);
-    $nmbr2 = rand(0,20);
-    $sign_integer = rand(1,2);
-    $sign_string = "";
+
     {
         $ans = "";
         if ( !is_numeric($answer) ) {
@@ -45,6 +42,8 @@
                 $total++;
         }
     }
+    $sign_integer = rand(1,2);
+    $sign_string = "";
 
     switch ($sign_integer) {
         case 1:
@@ -54,6 +53,10 @@
             $sign_string = "-";
             break;
     }
+    
+    $nmbr1 = rand(0,20);
+    $nmbr2 = rand(0,20);
+
 ?>
 
 <form action="index.php" method="post" role="form" class="form-horizontal">
